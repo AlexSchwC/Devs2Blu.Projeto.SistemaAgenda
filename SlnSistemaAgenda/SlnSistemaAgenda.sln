@@ -5,6 +5,8 @@ VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Devs2Blu.Projeto.SistemaAgenda.Form", "src\Devs2Blu.Projeto.SistemaAgenda\Devs2Blu.Projeto.SistemaAgenda.Form.csproj", "{7B0A976D-5C54-48EB-8252-4109238FE27A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Devs2Blu.Projeto.SistemaAgenda.Classes", "Devs2Blu.Projeto.SistemaAgenda.Classes\Devs2Blu.Projeto.SistemaAgenda.Classes.csproj", "{911A0FF3-73D1-40E4-BBCD-BEA5A9064676}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7B0A976D-5C54-48EB-8252-4109238FE27A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B0A976D-5C54-48EB-8252-4109238FE27A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B0A976D-5C54-48EB-8252-4109238FE27A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{911A0FF3-73D1-40E4-BBCD-BEA5A9064676}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{911A0FF3-73D1-40E4-BBCD-BEA5A9064676}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{911A0FF3-73D1-40E4-BBCD-BEA5A9064676}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{911A0FF3-73D1-40E4-BBCD-BEA5A9064676}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
