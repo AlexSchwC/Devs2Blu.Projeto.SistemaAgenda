@@ -129,28 +129,37 @@ namespace Devs2Blu.Projeto.SistemaAgenda
 
         private void dataGrid_Compromissos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGrid_Compromissos.SelectedCells[0].RowIndex != -1)
+            String clickedCell = dataGrid_Compromissos.SelectedCells[0].Value.ToString();
+            DataGridViewRow row = dataGrid_Compromissos.SelectedCells[0].OwningRow;
+            if (clickedCell == "SIM" || clickedCell == "NAO")
             {
-                DataGridViewRow row = dataGrid_Compromissos.SelectedCells[0].OwningRow;
-                GetCompromissoClicked(row);
-                //MessageBox.Show($"{Compromisso.Contato.Id}");
-                dateTimePicker.Value = Compromisso.Data;
-                txtb_DescricaoCompromisso.Text = Compromisso.Descricao;
-
-                if (Compromisso.Contato.Id > 0)
+                MySqlConnection conn = ConnectionMySQL.GetConnection();
+                CompromissoRepository.UpdateStatusCompromisso(clickedCell, row, conn);
+                conn.Close();
+                PopulaGridCompromissos();
+            } else
+            {
+                if (dataGrid_Compromissos.SelectedCells[0].RowIndex != -1)
                 {
-                    foreach (DataGridViewRow rows in dataGrid_Contatos.Rows)
+                    GetCompromissoClicked(row);
+                    dateTimePicker.Value = Compromisso.Data;
+                    txtb_DescricaoCompromisso.Text = Compromisso.Descricao;
+
+                    if (Compromisso.Contato.Id > 0)
                     {
-                        if (rows.Cells[0].Value.Equals(Compromisso.Contato.Id))
+                        foreach (DataGridViewRow rows in dataGrid_Contatos.Rows)
                         {
-                            txtb_ContatoNome.Text = rows.Cells["nome"].Value.ToString();
-                            break;
+                            if (rows.Cells[0].Value.Equals(Compromisso.Contato.Id))
+                            {
+                                txtb_ContatoNome.Text = rows.Cells["nome"].Value.ToString();
+                                break;
+                            }
                         }
                     }
-                }
 
-                btn_CompromissoAlterar.Enabled = true;
-                btn_CompromissoExcluir.Enabled = true;
+                    btn_CompromissoAlterar.Enabled = true;
+                    btn_CompromissoExcluir.Enabled = true;
+                }
             }
         }
 

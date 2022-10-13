@@ -63,6 +63,38 @@ namespace Devs2Blu.Projeto.SistemaAgenda.Data
             }
         }
 
+        public void UpdateStatusCompromisso(String status, DataGridViewRow row, MySqlConnection conn)
+        {
+            MySqlCommand cmd;
+            if (status.Equals("SIM"))
+            {
+                try
+                {
+                    cmd = new MySqlCommand(SQL_UPDATE_STATUS_ToNAO, conn);
+                    cmd.Parameters.Add("@id_compromisso", MySqlDbType.Int32).Value = (int)row.Cells["id"].Value;
+                    cmd.ExecuteNonQuery();
+                }
+                catch (MySqlException myEx)
+                {
+                    MessageBox.Show(myEx.Message, myEx.Code + " Erro de MySql", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    throw;
+                }
+            } else if (status.Equals("NAO"))
+            {
+                try
+                {
+                    cmd = new MySqlCommand(SQL_UPDATE_STATUS_ToSIM, conn);
+                    cmd.Parameters.Add("@id_compromisso", MySqlDbType.Int32).Value = (int)row.Cells["id"].Value;
+                    cmd.ExecuteNonQuery();
+                }
+                catch (MySqlException myEx)
+                {
+                    MessageBox.Show(myEx.Message, myEx.Code + " Erro de MySql", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    throw;
+                }
+            }
+        }
+
         public void DeleteCompromisso(Compromisso compromisso, MySqlConnection conn)
         {
             try
@@ -134,6 +166,8 @@ SET
 descricao = @descricao,
 data = @data
 WHERE id = @id_compromisso;";
+        const String SQL_UPDATE_STATUS_ToSIM = "UPDATE compromisso SET fl_concluido = 'SIM' WHERE id = @id_compromisso";
+        const String SQL_UPDATE_STATUS_ToNAO = "UPDATE compromisso SET fl_concluido = 'NAO' WHERE id = @id_compromisso";
 
         const String SQL_DELETE_COMPROMISSO = @"DELETE FROM compromisso WHERE id = @id_compromisso";
 

@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_CompromissoExcluir = new System.Windows.Forms.Button();
             this.btn_CompromissoAlterar = new System.Windows.Forms.Button();
@@ -65,6 +67,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.groupBox1.Controls.Add(this.btn_CompromissoExcluir);
             this.groupBox1.Controls.Add(this.btn_CompromissoAlterar);
             this.groupBox1.Controls.Add(this.btn_CompromissoSalvar);
@@ -181,8 +184,10 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.groupBox2.Controls.Add(this.dataGrid_Compromissos);
             this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox2.Location = new System.Drawing.Point(491, 15);
             this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
@@ -195,6 +200,15 @@
             // dataGrid_Compromissos
             // 
             this.dataGrid_Compromissos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGrid_Compromissos.DefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGrid_Compromissos.GridColor = System.Drawing.SystemColors.ButtonShadow;
             this.dataGrid_Compromissos.Location = new System.Drawing.Point(15, 27);
             this.dataGrid_Compromissos.Margin = new System.Windows.Forms.Padding(4);
             this.dataGrid_Compromissos.Name = "dataGrid_Compromissos";
@@ -205,8 +219,10 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.groupBox3.Controls.Add(this.dataGrid_Contatos);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.ForeColor = System.Drawing.SystemColors.Control;
             this.groupBox3.Location = new System.Drawing.Point(491, 394);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
@@ -219,6 +235,15 @@
             // dataGrid_Contatos
             // 
             this.dataGrid_Contatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGrid_Contatos.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGrid_Contatos.GridColor = System.Drawing.SystemColors.ButtonShadow;
             this.dataGrid_Contatos.Location = new System.Drawing.Point(15, 31);
             this.dataGrid_Contatos.Margin = new System.Windows.Forms.Padding(4);
             this.dataGrid_Contatos.Name = "dataGrid_Contatos";
@@ -229,6 +254,7 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.BackColor = System.Drawing.Color.WhiteSmoke;
             this.groupBox4.Controls.Add(this.btn_ContatoExcluir);
             this.groupBox4.Controls.Add(this.btn_ContatoAlterar);
             this.groupBox4.Controls.Add(this.btn_ContatoSalvar);
@@ -365,7 +391,7 @@
             // 
             // btn_Reset
             // 
-            this.btn_Reset.Location = new System.Drawing.Point(1258, 732);
+            this.btn_Reset.Location = new System.Drawing.Point(1258, 730);
             this.btn_Reset.Name = "btn_Reset";
             this.btn_Reset.Size = new System.Drawing.Size(92, 34);
             this.btn_Reset.TabIndex = 3;
@@ -377,6 +403,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.LightBlue;
             this.ClientSize = new System.Drawing.Size(1365, 778);
             this.Controls.Add(this.btn_Reset);
             this.Controls.Add(this.groupBox4);
