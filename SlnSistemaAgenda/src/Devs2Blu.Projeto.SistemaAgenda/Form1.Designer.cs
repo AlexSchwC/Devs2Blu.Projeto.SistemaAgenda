@@ -94,6 +94,7 @@
             this.btn_CompromissoExcluir.TabIndex = 14;
             this.btn_CompromissoExcluir.Text = "Excluir";
             this.btn_CompromissoExcluir.UseVisualStyleBackColor = true;
+            this.btn_CompromissoExcluir.Click += new System.EventHandler(this.btn_CompromissoExcluir_Click);
             // 
             // btn_CompromissoAlterar
             // 
@@ -105,6 +106,7 @@
             this.btn_CompromissoAlterar.TabIndex = 13;
             this.btn_CompromissoAlterar.Text = "Alterar";
             this.btn_CompromissoAlterar.UseVisualStyleBackColor = true;
+            this.btn_CompromissoAlterar.Click += new System.EventHandler(this.btn_CompromissoAlterar_Click);
             // 
             // btn_CompromissoSalvar
             // 
@@ -115,6 +117,7 @@
             this.btn_CompromissoSalvar.TabIndex = 12;
             this.btn_CompromissoSalvar.Text = "Salvar";
             this.btn_CompromissoSalvar.UseVisualStyleBackColor = true;
+            this.btn_CompromissoSalvar.Click += new System.EventHandler(this.btn_CompromissoSalvar_Click);
             // 
             // txtb_DescricaoCompromisso
             // 
@@ -139,6 +142,7 @@
             this.txtb_ContatoNome.Location = new System.Drawing.Point(108, 46);
             this.txtb_ContatoNome.Margin = new System.Windows.Forms.Padding(4);
             this.txtb_ContatoNome.Name = "txtb_ContatoNome";
+            this.txtb_ContatoNome.ReadOnly = true;
             this.txtb_ContatoNome.Size = new System.Drawing.Size(329, 23);
             this.txtb_ContatoNome.TabIndex = 3;
             // 
@@ -197,6 +201,7 @@
             this.dataGrid_Compromissos.RowHeadersWidth = 51;
             this.dataGrid_Compromissos.Size = new System.Drawing.Size(831, 330);
             this.dataGrid_Compromissos.TabIndex = 0;
+            this.dataGrid_Compromissos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_Compromissos_CellDoubleClick);
             // 
             // groupBox3
             // 

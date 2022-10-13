@@ -9,6 +9,7 @@ namespace Devs2Blu.Projeto.SistemaAgenda.Classes
 {
     public class Compromisso
     {
+        public Int32 Id { get; set; }
         public Contato Contato { get; set; }
         public DateTime Data { get; set; }
         public String Descricao { get; set; }

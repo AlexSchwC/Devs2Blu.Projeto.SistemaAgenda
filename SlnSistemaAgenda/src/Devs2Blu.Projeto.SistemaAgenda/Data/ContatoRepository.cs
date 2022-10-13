@@ -55,7 +55,7 @@ namespace Devs2Blu.Projeto.SistemaAgenda.Data
             try
             {
                 MySqlCommand cmd = new MySqlCommand(SQL_DELETE_CONTATO, conn);
-                cmd.Parameters.Add("@id_contato", MySqlDbType.VarChar, 55).Value = contato.Id;
+                cmd.Parameters.Add("@id_contato", MySqlDbType.Int32).Value = contato.Id;
                 cmd.ExecuteNonQuery();
                 MessageBox.Show($"Contato {contato.Nome} excluido!", "Sucesso");
             }
